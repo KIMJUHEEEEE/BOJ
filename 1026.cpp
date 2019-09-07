@@ -26,4 +26,5 @@ int main() {
 		sum += a[i] * c[ca - i - 1];
 	}
 	cout << sum;
+	
 }
