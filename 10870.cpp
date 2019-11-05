@@ -10,6 +10,7 @@ int fib(int n) {
 	}
 	return arr[n];
 }
+
 int main() {
 	int n = 0;
 	cin >> n;
