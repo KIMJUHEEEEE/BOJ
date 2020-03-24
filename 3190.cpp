@@ -6,6 +6,7 @@ int snake[101][101];
 queue<pair<int, char>> q;
 queue<pair<int, int>> s;
 int n;
+
 int move()
 {
 	snake[1][1] = 1;
@@ -27,7 +28,7 @@ int move()
 		while (cnt< t)
 		{
 			cnt++;
-			if (fc == 'S')//¿À¸¥ÂÊ ÁøÇà
+			if (fc == 'S')//ì˜¤ë¥¸ìª½ ì§„í–‰
 			{
 				if (snake[x][y+1] == 1) return cnt;
 				if (y + 1 > n) return cnt;
@@ -45,7 +46,7 @@ int move()
 				else
 					map[x][y] = 0;
 			}
-			else if (fc == 'A')//¿ŞÂÊ ÁøÇà
+			else if (fc == 'A')//ì™¼ìª½ ì§„í–‰
 			{
 				if (snake[x][y-1] == 1) return cnt;
 				if (y-1 ==0) return cnt;
@@ -63,7 +64,7 @@ int move()
 				else
 					map[x][y] = 0;
 			}
-			else if (fc == 'W')//À§ÂÊ ÁøÇà
+			else if (fc == 'W')//ìœ„ìª½ ì§„í–‰
 			{
 				if (snake[x-1][y] == 1) return cnt;
 				if (x - 1 == 0) return cnt;
@@ -81,7 +82,7 @@ int move()
 				else
 					map[x][y] = 0;
 			}
-			else if (fc == 'Z')//¾Æ·¡ÂÊ ÁøÇà
+			else if (fc == 'Z')//ì•„ë˜ìª½ ì§„í–‰
 			{
 				if (snake[x+1][y] == 1) return cnt;
 				if (x + 1 > n) return cnt;
